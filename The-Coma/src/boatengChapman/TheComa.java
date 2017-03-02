@@ -13,15 +13,16 @@ public class TheComa {
 		String answer6;
 		String answer7;
 		String answer8;
+		String answer99;
 		double number1 = Math.random();
-		
+		do{
 		console.println("Some time ago, you were involved in a terrible car accident on Valentine's Day with your loving wife of 15 years, Veronica. You are just waking up from the resulting coma in a hospital that seems to be abandoned. Would you like to search your room or leave? (search room/leave)");
 		answer1 = console.readLine();
 		if (answer1.equals("search room")){
 			console.println("After searching your room, you stumble upon Veronica's file which states the room she was held in and she had become mentally unstable after waking up from her coma. Do you choose to go to her room or leave the hospital? (go to room/ leave)");
 			answer2 = console.readLine();
 			if (answer2.equals("go to room")){
-				console.println("When you get to Veronica's room, you find a decaying body and also notice that the case on the wall that contained a fire axe has been broken. Do you seach the body or leave? (search/ leave)");
+				console.println("When you get to Veronica's room, you find a decaying body and also notice that the case on the wall that contained a fire axe has been broken. Do you seach the body or leave? (search/ leave)"); 
 				answer3 = console.readLine();
 				if (answer3.equals("search")){
 					console.println("You hold your breath as you search the corpse and find a key. Do you go to that room or stay put. (go to room/stay)");
@@ -38,18 +39,49 @@ public class TheComa {
 									console.println("I killed everyone here to make sure that I could see you everyday. Do you accept this and try to leave with her or leave by yourself? (accept/leave)");
 									answer7 = console.readLine();
 									if(answer7.equals("accept")){
-										console.println("You leave with her and live with a psychopath for the rest of your life");//End of this line, connect to play again
+										console.println("You leave with her and live with a psychopath for the rest of your life");
 									}
 								}
 								
 							}
+							else if(answer5.equals("leave")){
+								console.println("You leave with Veronica without ever finding out what happened here.");
+							}
+							else{
+								console.println("I killed everyone here to make sure that I could see you every day. Do you try to disarm her or just try to slip by and escape? (disarm/leave");//must continue
+							}
+						}
+						else{
+							console.println("You get electrocuted. YOU ARE DEAD!");
 						}
 					}
+					else{
+						console.println("You're not sure what to do so you just look at the pictures hanging on the walls. After a while you feel a dark presence approaching but as you turn around you see an axe about to swing down on you. YOU ARE DEAD!");
+					}
 				}
+				else{
+					while(answer2.equals("leave")){
+						console.println("You go to the doors of the hospital but they are locked so you decide to return to Veronica's room. Do you try to leave again or search the body? (search/leave)");
+						answer2 = console.readLine();//same problem as other while loop
+					
+				}
+				
 			}
-		}
+			}
+			else{
+				while(answer2.equals("leave")){
+				console.println("You go to the doors of the hospital but they are locked so you decide to return to your room. Do you try to leave again or go to Veronica's room? (go to room/leave)");
+				answer2 = console.readLine();
+				}
+				if (answer2.equals("go to room")){
+					console.println("When you get to Veronica's room, you find a decaying body and also notice that the case on the wall that contained a fire axe has been broken. Do you seach the body or leave? (search/ leave)"); 
+					answer3 = console.readLine();//need to figure out how to get back to normal part of program
+			}
+		}//search room or leave
 		
 
 	}
 
-}
+	
+console.println("Would you like to play again?");
+answer99 = console.readLine();}while (answer99.equals("yes"));}}
