@@ -12,7 +12,7 @@ import javax.imageio.ImageIO;
 /*
  * @author Abigail Boateng and Roger Chapman
  * Adventure game The Coma
- * February 27 2017 
+ * February 27 2017
  */
 
 public class TheComa {
